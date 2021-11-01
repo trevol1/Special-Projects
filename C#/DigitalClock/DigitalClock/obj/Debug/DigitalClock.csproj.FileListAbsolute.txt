@@ -1,0 +1,9 @@
+C:\Users\TRLED\PersonalProjects\DigitalClock\DigitalClock\bin\Debug\DigitalClock.exe.config
+C:\Users\TRLED\PersonalProjects\DigitalClock\DigitalClock\bin\Debug\DigitalClock.exe
+C:\Users\TRLED\PersonalProjects\DigitalClock\DigitalClock\bin\Debug\DigitalClock.pdb
+C:\Users\TRLED\PersonalProjects\DigitalClock\DigitalClock\obj\Debug\DigitalClock.csprojAssemblyReference.cache
+C:\Users\TRLED\PersonalProjects\DigitalClock\DigitalClock\obj\Debug\DigitalClock.Properties.Resources.resources
+C:\Users\TRLED\PersonalProjects\DigitalClock\DigitalClock\obj\Debug\DigitalClock.csproj.GenerateResource.cache
+C:\Users\TRLED\PersonalProjects\DigitalClock\DigitalClock\obj\Debug\DigitalClock.exe
+C:\Users\TRLED\PersonalProjects\DigitalClock\DigitalClock\obj\Debug\DigitalClock.pdb
+C:\Users\TRLED\PersonalProjects\DigitalClock\DigitalClock\obj\Debug\DigitalClock.DigitalClock.resources
