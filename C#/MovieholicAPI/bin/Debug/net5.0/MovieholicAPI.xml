@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MovieholicAPI</name>
+    </assembly>
+    <members>
+        <member name="M:MovieholicAPI.Controllers.CharacterController.GetCharacters">
+            <summary>
+            Displays all characters.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.CharacterController.GetCharacter(System.Int32)">
+            <summary>
+            Displays a character by Id.
+            Returns NotFound() if character is null.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.CharacterController.PutCharacter(System.Int32,MovieholicAPI.Models.DTO.Character.CharacterEditDTO)">
+            <summary>
+            Updates a character by Id. Passing full character object and Id is required.
+            Returns BadRequest() if id and dtoCharacter.Id are not equal.
+            Returns NotFound() if character don't exists.
+            </summary>
+            <param name="id"></param>
+            <param name="dtoCharacter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.CharacterController.PostCharacter(MovieholicAPI.Models.DTO.Character.CharacterCreateDTO)">
+            <summary>
+            Creates and adds new character to the database.
+            </summary>
+            <param name="dtoCharacter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.CharacterController.DeleteCharacter(System.Int32)">
+            <summary>
+            Deletes a character by Id, from database. Irreversible action.
+            Returns NotFound() if character don't exists.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.FranchiseController.GetFranchises">
+            <summary>
+            Displays all franchises.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.FranchiseController.GetFranchise(System.Int32)">
+            <summary>
+            Displays a franchise by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.FranchiseController.GetFranchiseMovies(System.Int32)">
+            <summary>
+            Displays all movies in a franchise by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.FranchiseController.GetFranchiseCharacters(System.Int32)">
+            <summary>
+            Displays all characters in a franchise by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.FranchiseController.PutFranchise(System.Int32,MovieholicAPI.Models.DTO.Franchise.FranchiseEditDTO)">
+            <summary>
+            Updates a franchise by Id. Passing full franchise object and Id is required.
+            </summary>
+            <param name="id"></param>
+            <param name="dtoFranchise"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.FranchiseController.PutFranchiseMovies(System.Int32,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Updates movies in a franchise by Id.
+            </summary>
+            <param name="id"></param>
+            <param name="characters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.FranchiseController.PostFranchise(MovieholicAPI.Models.DTO.Franchise.FranchiseCreateDTO)">
+            <summary>
+            Creates and adds new franchise to the database.
+            </summary>
+            <param name="dtoFranchise"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.FranchiseController.DeleteFranchise(System.Int32)">
+            <summary>
+            Deletes a franchise by Id, from database. Irreversible action.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.MovieController.GetMovies">
+            <summary>
+            Displays all movies.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.MovieController.GetMovie(System.Int32)">
+            <summary>
+            Displays a movie by Id.
+            Returns NotFound() if movie is null.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.MovieController.GetMovieCharacters(System.Int32)">
+            <summary>
+            Displays all characters in a specific movie by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.MovieController.PutMovie(System.Int32,MovieholicAPI.Models.DTO.Movie.MovieEditDTO)">
+            <summary>
+            Updates a movie by Id. Passing full movie object and Id is required.
+            Returns BadRequest() if movieId and dtoMovie.Id is not equal.
+            Returns NotFound() if the movie don't exists.
+            </summary>
+            <param name="id"></param>
+            <param name="dtoMovie"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.MovieController.PutMovieCharacter(System.Int32,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Updates characters in a movie by Id.
+            Returns NotFound() if the movie don't exists.
+            </summary>
+            <param name="id"></param>
+            <param name="characters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.MovieController.PostMovie(MovieholicAPI.Models.DTO.Movie.MovieCreateDTO)">
+            <summary>
+            Creates and adds new movie to the database.
+            </summary>
+            <param name="dtoMovie"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Controllers.MovieController.DeleteMovie(System.Int32)">
+            <summary>
+            Deletes a movie by Id, from database. Irreversible action.
+            Returns NotFound() if the movie don't exists.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.CharacterServices.CharacterService.GetAllCharactersAsync">
+            <summary>
+            Gets all characters.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.CharacterServices.CharacterService.GetCharacterByIdAsync(System.Int32)">
+            <summary>
+            Gets a character by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.CharacterServices.CharacterService.AddNewCharacterAsync(MovieholicAPI.Models.Domain.Character)">
+            <summary>
+            Adds a character to the database.
+            </summary>
+            <param name="character"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.CharacterServices.CharacterService.UpdateCharacterAsync(MovieholicAPI.Models.Domain.Character)">
+            <summary>
+            Updates a character by Id.
+            </summary>
+            <param name="character"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.CharacterServices.CharacterService.DeleteCharacterByIdAsync(System.Int32)">
+            <summary>
+            Deletes a character by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.CharacterServices.CharacterService.CharacterExists(System.Int32)">
+            <summary>
+            Checks if the character exists.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.FranchiseServices.FranchiseService.GetAllFranchisesAsync">
+            <summary>
+            Gets all franchises.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.FranchiseServices.FranchiseService.GetFranchiseByIdAsync(System.Int32)">
+            <summary>
+            Gets a franchise by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.FranchiseServices.FranchiseService.GetAllMoviesFromFranchise(System.Int32)">
+            <summary>
+            Gets all movies in a franchise by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.FranchiseServices.FranchiseService.GetAllCharactersFromFranchise(System.Int32)">
+            <summary>
+            Gets all characters in a franchise by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.FranchiseServices.FranchiseService.AddNewFranchiseAsync(MovieholicAPI.Models.Domain.Franchise)">
+            <summary>
+            Adds a franchise to the database.
+            </summary>
+            <param name="franchise"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.FranchiseServices.FranchiseService.UpdateFranchiseAsync(MovieholicAPI.Models.Domain.Franchise)">
+            <summary>
+            Updates a franchise by Id.
+            </summary>
+            <param name="franchise"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.FranchiseServices.FranchiseService.UpdateFranchiseMoviesAsync(System.Int32,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Updates a movie in a franchise by Id.
+            Throws a KeyNotFoundException if movie is null.
+            </summary>
+            <param name="id"></param>
+            <param name="movies"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.FranchiseServices.FranchiseService.DeleteFranchiseByIdAsync(System.Int32)">
+            <summary>
+            Deletes a franchise by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.FranchiseServices.FranchiseService.FranchiseExists(System.Int32)">
+            <summary>
+            Checks if the franchise exists.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.MovieServices.MovieService.GetAllMoviesAsync">
+            <summary>
+            Gets all movies.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.MovieServices.MovieService.GetMovieByIdAsync(System.Int32)">
+            <summary>
+            Gets a movie by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.MovieServices.MovieService.GetAllCharactersFromMovie(System.Int32)">
+            <summary>
+            Gets all characters in a movie by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.MovieServices.MovieService.AddNewMovieAsync(MovieholicAPI.Models.Domain.Movie)">
+            <summary>
+            Adds a movie to the database.
+            </summary>
+            <param name="movie"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.MovieServices.MovieService.UpdateMovieAsync(MovieholicAPI.Models.Domain.Movie)">
+            <summary>
+            Updates a movie by Id.
+            </summary>
+            <param name="movie"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.MovieServices.MovieService.UpdateMovieCharactersAsync(System.Int32,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Updates a character in a movie by Id.
+            Throws a KeyNotFoundException if character is null.
+            </summary>
+            <param name="id"></param>
+            <param name="characters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.MovieServices.MovieService.DeleteMovieByIdAsync(System.Int32)">
+            <summary>
+            Deletes a movie by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MovieholicAPI.Services.MovieServices.MovieService.MovieExists(System.Int32)">
+            <summary>
+            Checks if the movie exists.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
